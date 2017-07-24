@@ -102,6 +102,9 @@ type variableProperties struct {
 		Target_shim_libs struct {
 			Cppflags []string
 		}
+		Has_legacy_camera_hal1 struct {
+			Cflags []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -178,6 +181,7 @@ type productVariables struct {
 
 	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
+	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 
 	Target_shim_libs  *string `json:",omitempty"`
 }
